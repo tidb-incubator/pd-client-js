@@ -1,7 +1,11 @@
 {
   "name": "pd-client-js",
   "version": "0.1.0",
-  "main": "index.js",
+  "description": "client js sdk for pd",
+  "keywords": ["pd", "client sdk"],
+  "author": "pingcap",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
