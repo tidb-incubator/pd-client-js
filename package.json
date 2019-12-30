@@ -2,6 +2,9 @@
   "name": "pd-client-js",
   "version": "0.1.0",
   "main": "index.js",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
