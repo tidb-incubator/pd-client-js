@@ -6,9 +6,16 @@
     "lib/**/*"
   ],
   "scripts": {
+    "test": "jest --config jestconfig.json",
     "build": "tsc",
+
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "test": "jest --config jestconfig.json"
+    "lint": "echo 'todo by eslint'",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
