@@ -2,7 +2,10 @@
   "name": "pd-client-js",
   "version": "0.1.0",
   "description": "client js sdk for pd",
-  "keywords": ["pd", "client sdk"],
+  "keywords": [
+    "pd",
+    "client sdk"
+  ],
   "author": "pingcap",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,7 +15,6 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
-
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "echo 'todo by eslint'",
     "prepare": "npm run build",
@@ -27,5 +29,8 @@
     "prettier": "^1.19.1",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.4"
+  },
+  "peerDependencies": {
+    "axios": "^0.19.0"
   }
 }
