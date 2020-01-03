@@ -19,7 +19,7 @@ Install dependencies and build:
 
 ```sh
 $ yarn
-$ yarn run build
+$ yarn build
 ```
 
 ### Run tests
@@ -32,16 +32,40 @@ $ yarn test
 
 ## How to use
 
-Install pd-client-js in your project:
+### Install
 
-```sh
-$ yarn add @pingcap/pd-client-js
-```
+Currently we only publish this package to the GitHub Packages, we need to follow its instruction - [Installing a package](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages#installing-a-package).
+
+According to the instruction, we need to authenticate to the GitHub Packages with a personal access token.
+
+1. Create a personal access token
+
+   Follow personal "Settings" -> "Developer settings" -> "Personal access tokens" -> "Generate new token" path, the "Select scopes" must select "repo" and "read:packages" at least.
+
+1. Edit the ~/.npmrc, add a new line by the following content
+
+   ```
+   //npm.pkg.github.com/:_authToken=[YOUR_PERSONAL_ACCESS_TOKEN]
+   ```
+
+1. Create or edit another .npmrc inside your project folder, in the same directory as the `package.json`, to include the following line specifying GitHub Packages and the account owner
+
+   ```
+   registry=https://npm.pkg.github.com/pingcap-incubator
+   ```
+
+1. Install the @pingcap-incubator/pd-client-js for your project
+
+   ```sh
+   $ npm install @pingcap-incubator/pd-client-js
+   ```
+
+### Use
 
 Create an instance of PDClient and call its methods:
 
 ```js
-import PDClient from 'pd-client-js'
+import PDClient from '@pingcap-incubator/pd-client-js'
 
 const client = new PDClient({
   endpoint: 'API_BASE_URL'
