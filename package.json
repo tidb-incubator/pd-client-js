@@ -14,14 +14,15 @@
   ],
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "tsc",
+    "build": "tsc && yarn run remove-test",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "echo 'todo by eslint'",
     "prepare": "install-peers",
     "prepublishOnly": "yarn test && yarn run lint",
     "preversion": "yarn run lint",
     "version": "yarn run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "remove-test": "rm -rf lib/__test__"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
