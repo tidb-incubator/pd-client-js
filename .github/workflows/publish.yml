@@ -14,6 +14,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@pingcap-incubator' # Defaults to the user or organization that owns the workflow file
       - run: yarn
+      - run: yarn build
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
