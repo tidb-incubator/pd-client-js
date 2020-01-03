@@ -1,6 +1,6 @@
 {
   "name": "@pingcap-incubator/pd-client-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "client js sdk for pd",
   "keywords": [
     "pd",
@@ -17,10 +17,10 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "echo 'todo by eslint'",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "prepare": "yarn run build",
+    "prepublishOnly": "yarn test && yarn run lint",
+    "preversion": "yarn run lint",
+    "version": "yarn run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
