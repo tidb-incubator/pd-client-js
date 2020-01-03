@@ -1,5 +1,5 @@
 {
-  "name": "pd-client-js",
+  "name": "@pingcap-incubator/pd-client-js",
   "version": "0.1.0",
   "description": "client js sdk for pd",
   "keywords": [
