@@ -54,11 +54,19 @@ According to the instruction, we need to authenticate to the GitHub Packages wit
    registry=https://npm.pkg.github.com/pingcap-incubator
    ```
 
+   If you use yarn, create .yarnrc instead of the .npmrc, fill with following content:
+
+   ```
+   "@pingcap-incubator:registry" "https://npm.pkg.github.com"
+   ```
+
 1. Install the @pingcap-incubator/pd-client-js for your project
 
    ```sh
    $ npm install @pingcap-incubator/pd-client-js
    ```
+
+   If you use yarn, add the `"@pingcap-incubator/pd-client-js": "^0.1.5"` into the package.json, then run `yarn install --update-checksums`. Related issue about yarn: [Integrity checked failed error](https://github.com/yarnpkg/yarn/issues/7552).
 
 ### Use
 
@@ -76,4 +84,4 @@ client.getHeatmap()
 
 ## License
 
-PD-Web is under the Apache 2.0 license.
+pd-client-js is under the Apache 2.0 license.
