@@ -40,27 +40,27 @@ According to the instruction, we need to authenticate to the GitHub Packages wit
 
 1. Create a personal access token
 
-   Follow personal "Settings" -> "Developer settings" -> "Personal access tokens" -> "Generate new token" path, the "Select scopes" must select "repo" and "read:packages" at least.
+   Follow personal ["Settings" -> "Developer settings" -> "Personal access tokens" -> "Generate new token"](https://github.com/settings/tokens/new) path, the "Select scopes" must select "repo" and "read:packages" at least.
 
-1. Edit the ~/.npmrc, add a new line by the following content
+1. Edit `~/.npmrc`, add a new line by the following content
 
    ```
    //npm.pkg.github.com/:_authToken=[YOUR_PERSONAL_ACCESS_TOKEN]
    ```
 
-1. Create or edit another .npmrc inside your project folder, in the same directory as the `package.json`, to include the following line specifying GitHub Packages and the account owner
+1. For project owner: Create or edit `.npmrc` **inside your project folder**, in the same directory as the `package.json`, to include the following line specifying GitHub Packages and the account owner
 
    ```
    registry=https://npm.pkg.github.com/pingcap-incubator
    ```
 
-   If you use yarn, create .yarnrc instead of the .npmrc, fill with following content:
+   If you use yarn, create `.yarnrc` instead of the `.npmrc`, fill with following content:
 
    ```
    "@pingcap-incubator:registry" "https://npm.pkg.github.com"
    ```
 
-1. Install the @pingcap-incubator/pd-client-js for your project
+1. For project owner: Install the `@pingcap-incubator/pd-client-js` for your project
 
    ```sh
    $ npm install @pingcap-incubator/pd-client-js
